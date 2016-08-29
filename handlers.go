@@ -21,7 +21,7 @@ func Vokabelsets(w http.ResponseWriter, r *http.Request) {
 	set, err := strconv.Atoi(setRaw)
 	//fmt.Printf("Chose Set: %d\n", set)
 	if err != nil {
-		fmt.Fprintf(w, "Error: Bad List Number: %d", setRaw)
+		fmt.Fprintf(w, "Error: Bad List Number: %s", setRaw)
 		return
 	}
 	//fmt.Printf("Checked for Vokabelset %d\n", set)

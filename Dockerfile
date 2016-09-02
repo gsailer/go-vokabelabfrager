@@ -9,4 +9,4 @@ RUN go get -v -d github.com/sublinus/go-vokabelabfrager
 RUN mkdir /vokabelabfrager
 
 ENTRYPOINT /go/bin/go-vokabelabfrager
-EXPOSE 80
+EXPOSE 8080

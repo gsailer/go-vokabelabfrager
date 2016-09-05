@@ -9,6 +9,7 @@ import (
 )
 
 func Vokabellists(w http.ResponseWriter, r *http.Request) {
+	// return all available Vokabelset titles
 	data := loadLists()
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusOK)
@@ -16,6 +17,7 @@ func Vokabellists(w http.ResponseWriter, r *http.Request) {
 }
 
 func Vokabelsets(w http.ResponseWriter, r *http.Request) {
+	// return all data in one defined Vokabelset(set) as JSON
 	vars := mux.Vars(r)
 	setRaw := string(vars["list"])
 	set, err := strconv.Atoi(setRaw)

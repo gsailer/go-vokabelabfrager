@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-const dbPath = "/usr/local/etc/data.db"
+const dbPath = "/usr/local/etc/vokabelabfrager/data.db"
 
 func checkErr(err error) {
 	if err != nil {
@@ -15,5 +15,5 @@ func checkErr(err error) {
 
 func main() {
 	router := NewRouter()
-	log.Fatal(http.ListenAndServe(":80", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }

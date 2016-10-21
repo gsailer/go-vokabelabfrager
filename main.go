@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-const dbPath = "/usr/local/etc/vokabelabfrager/data.db"
+const dbPath = "/vokabelabfrager/data.db"
 
 func checkErr(err error) {
 	if err != nil {

@@ -8,10 +8,10 @@ RUN go get -v -d github.com/sublinus/go-vokabelabfrager
 
 RUN go install github.com/sublinus/go-vokabelabfrager
 
-RUN mkdir /usr/local/etc/vokabelabfrager
+RUN mkdir /vokabelabfrager
 
 # temporary solution to provide a test data set
-ADD ./data.db /usr/local/etc/vokabelabfrager/data.db
+ADD ./data.db /vokabelabfrager/data.db
 
 # ENTRYPOINT /go/bin/go-vokabelabfrager
 CMD ["/go/bin/go-vokabelabfrager"]
